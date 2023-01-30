@@ -1,0 +1,12 @@
+.article_list--head {
+    margin: 0;
+    margin-top: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: 600;
+}
+
+.article_list--main {
+    margin: 0;
+    margin-top: 0.5%;
+}

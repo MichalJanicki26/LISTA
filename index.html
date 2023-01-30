@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/head.css" rel="stylesheet">
+    <link href="css/article.css" rel="stylesheet">
+    <link href="css/article_addNew.css" rel="stylesheet">
+    <link href="css/article_list.css" rel="stylesheet">
+    <title>Lista Zadań</title>
+    <link rel="icon" href="images/list-icon.png">
+</head>
+
+<body class="body">
+
+    <h1 class="head">Lista zadań</h1>
+    <div class="article article_addNew article_addNew--head">
+        <p>Dodaj nowe zadanie</p>
+    </div>
+    <form class="article article_addNew article_addNew--main js-form">
+        <input name="newTask" class="article_addNew--input js-newTask" placeholder="Co jest do zrobienia?">
+        <button class="article_addNew--button">Dodaj zadanie</button>
+    </form>
+    <div class="article article_list article_list--head">
+        <p class="article_list">Lista Zadań</p>
+    </div>
+    <div class="article article_list article_list--main">
+        <ul class="js-tasks"></ul>
+    </div>
+    <script defer src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.article_addNew--head {
+    margin: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: 600;
+}
+
+.article_addNew--main {
+    margin: 0;
+    margin-top: 0.5%;
+}
+
+.article_addNew--butto {
+    background-color: #008080;
+    border: none;
+    color: white;
+    font-size: 16px;
+    height: 100%;
+    padding: 10px;
+}
+
+.article_addNew--input {
+    padding: 10px;
+}
