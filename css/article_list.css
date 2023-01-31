@@ -9,4 +9,25 @@
 .article_list--main {
     margin: 0;
     margin-top: 0.5%;
+
+}
+
+.article_list--list {
+    margin-left: 40px; 
+    list-style:none;
+    list-style-image: url(/images/icon-green.png);
+}
+
+.article_list--button {
+    margin: 5px;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 3px 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.article_list--button:hover {
+    background-color: rgb(209, 0, 0);
 }

@@ -10,6 +10,7 @@
             htmlString += `
             <li${task.done ? " class=\"taskDone\"" : ""}>
             ${task.content}
+            <button class="article_list--button"><i class="fa fa-close"></i></button>
             </li>
             `;
         }
