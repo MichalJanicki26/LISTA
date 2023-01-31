@@ -8,27 +8,25 @@
 
 .article_addNew--main {
     margin: 0;
-    margin-top: 0.25%;
+    margin-top: 1%;
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .article_addNew--input {
     margin: 4px;
     padding: 8px;
-    width: fit-content;
-    flex-grow: 1;
+    flex-grow: 4;
 }
 
 .article_addNew--button {
     margin: 4px;
-    background-color: teal;
-    border: none;
-    color: white;
     padding: 10px;
+    border: none;
+    background-color: teal;
+    color: white;
     font-size: 16px;
     cursor: pointer;
-    line-height: 1.15;
+    flex-grow: 1;
 }
 

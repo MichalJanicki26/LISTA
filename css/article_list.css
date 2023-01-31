@@ -1,5 +1,5 @@
 .article_list--head {
-    margin: 0;
+    margin: 0px;
     margin-top: 5%;
     padding-top: 0;
     padding-bottom: 0;
@@ -8,18 +8,19 @@
 }
 
 .article_list--main {
-    margin: 0;
-    margin-top: 0.25%;
+    margin: 0px;
+    margin-top: 1%;
+    padding-bottom: 40px;
 }
 
 .article_list--list {
-    list-style:none;
-    padding-inline-start: 0px;
-    font-size: 22px;
     margin: 0px;
+    padding-inline-start: 0px;
+    font-size: 20px;
+    list-style:none;
 }
 
-.article_list--checkButton {
+.article_list--uncheckButton {
     margin: 5px;
     width: 24px;
     height: 24px;
@@ -31,7 +32,7 @@
     cursor: pointer;
 }
 
-.article_list--checkButton:hover {
+.article_list--uncheckButton:hover {
     background-color: rgb(0, 80, 0);
 }
 
@@ -45,6 +46,12 @@
     padding: 3px 4px;
     font-size: 16px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa {
+    padding: 1px;
 }
 
 .article_list--removeButton:hover {
