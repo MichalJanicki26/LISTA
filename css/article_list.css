@@ -13,9 +13,9 @@
 }
 
 .article_list--list {
-    margin-left: 40px; 
     list-style:none;
-    list-style-image: url(/images/icon-green.png);
+    padding-inline-start: 20px;
+;
 }
 
 .article_list--button {
