@@ -2,12 +2,13 @@
     margin: 0px;
     padding-top: 0;
     padding-bottom: 0;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: bolder;
 }
 
 .article_addNew--main {
     margin: 0;
-    margin-top: 0.5%;
+    margin-top: 0.25%;
     display: flex;
     flex-wrap: wrap;
 
