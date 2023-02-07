@@ -1,0 +1,33 @@
+.addNew {
+    background-color: white;
+    margin: 0%;
+    padding: 1.75%;
+}
+
+.addNew__head {
+    font-size: 150%;
+    font-weight: 700;
+}
+
+.addNew__main {
+    font-size: 120%;
+    margin-top: 0.5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5%;
+}
+
+.addNew__input {
+    padding: 0.5%;
+    width: 75%;
+    flex-grow: 4;
+}
+
+.addNew__button {
+    padding: 0.5%;
+    border: none;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    flex-grow: 1;
+}

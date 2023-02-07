@@ -11,29 +11,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/head.css" rel="stylesheet">
-    <link href="css/article.css" rel="stylesheet">
-    <link href="css/article_addNew.css" rel="stylesheet">
-    <link href="css/article_list.css" rel="stylesheet">
+    <link href="css/addNew.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
     <title>Lista Zadań</title>
     <link rel="icon" href="images/list-icon.png">
 </head>
 
 <body class="body">
     <h1 class="head">Lista zadań</h1>
-    <div class="article article_addNew article_addNew--head">
-        <p>Dodaj nowe zadanie</p>
+    <div class="addNew addNew__head">
+        <a>Dodaj nowe zadanie</a>
     </div>
-    <form class="article article_addNew article_addNew--main js-form">
-        <input name="newTask" class="article_addNew--input js-newTask" placeholder="Co jest do zrobienia?">
-        <button class="article_addNew--button">Dodaj zadanie</button>
+    <form class="addNew addNew__main js-form">
+        <input name="newTask" class="addNew__input js-newTask" placeholder="Co jest do zrobienia?">
+        <button class="addNew__button">Dodaj zadanie</button>
     </form>
-    <div class="article article_list article_list--head">
-        <p class="article_list">Lista Zadań</p>
+    <div class="list list__head">
+        <p>Lista Zadań</p>
     </div>
-    <div class="article article_list article_list--main">
-        <ul class="article_list--list js-tasks"></ul>
+    <div class="list list__main">
+        <ul class="list__list js-tasks"></ul>
     </div>
-    <script defer src="js/script.js"></script>
 </body>
 
 </html>

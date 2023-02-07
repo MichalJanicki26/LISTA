@@ -1,6 +1,5 @@
 {
     const tasks = [
-        {}
     ];
 
     const addNewTask = (newTaskContent) => {
@@ -40,15 +39,18 @@
 
     const render = () => {
         let htmlString = "";
+
         for (const task of tasks) {
             htmlString += `
-            <li${task.done ? " class=\"taskDone\"" : ""}>
-            <button class="article_list--uncheckButton js-done"></button>
-            ${task.content}
-            <button class="article_list--removeButton js-remove"><i class="fa fa-close"></i></button>
-            </li>
-            `;
+                <li class="list__item${task.done ? " taskDone" : ""}">
 
+                <button class="list__uncheckedButton js-done">${task.done ? "✓" : ""}</button>
+
+                <a class="list__task${task.done ? " taskCrossed" : ""}">${task.content}</a>
+
+                <button class="list__removeButton js-remove">X</button>
+                </li>
+            `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;

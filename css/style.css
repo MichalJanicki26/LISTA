@@ -8,12 +8,10 @@ html {
 
 .body {
 width: 100%;
-padding: 5% 10% 5% 10%;
+padding: 1% 11% 1% 11%;
 background-color: whitesmoke;
-
 display: grid;
 justify-content: stretch;
-
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 
