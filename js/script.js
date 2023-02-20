@@ -64,7 +64,7 @@
             return;
         }
         addNewTask(newTaskContent);
-        newTask.innerHTML = "";
+        newTask.value = "";
     };
 
     const init = () => {
