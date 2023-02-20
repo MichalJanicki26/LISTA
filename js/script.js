@@ -1,6 +1,5 @@
 {
-    const tasks = [
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -52,29 +51,25 @@
                 </li>
             `;
         }
-
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
         bindEvents();
     };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-
+        const newTask = document.querySelector(".js-newTask");
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
         if (newTaskContent === "") {
             return;
         }
-
         addNewTask(newTaskContent);
+        newTask.innerHTML = "";
     };
 
     const init = () => {
         render();
-
         const form = document.querySelector(".js-form");
-
         form.addEventListener("submit", onFormSubmit);
     };
 
