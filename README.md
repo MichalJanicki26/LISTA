@@ -5,6 +5,6 @@ The list just adds some tasks to the list, and gives you option to cross the tas
 
 All i did was a simple function in java script.
 
-![sample](images/sample.png)
-
 https://michaljanicki26.github.io/LISTA/
+
+![sample](images/sample.png)
