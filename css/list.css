@@ -19,6 +19,7 @@
 }
 
 .list__list {
+    margin: 0%;
     padding-inline-start: 0px;
     list-style:none;
 }
@@ -27,6 +28,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: auto 1fr auto;
+    gap: 15px;
     border-bottom: 2px solid whitesmoke;
 }
 
