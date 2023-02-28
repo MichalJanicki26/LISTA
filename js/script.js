@@ -1,22 +1,32 @@
 {
-    const tasks = [];
+    let tasks = [];
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
         render();
     };
 
     const removeTask = (index) => {
         tasks.splice(index, 1);
         render();
-    }
+    };
 
     const toggleTaskDone = (taskIndex) => {
+        tasks = tasks.map;
+        //
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render()
-    }
+    };
+
+
+    const toggleAllTasksDone = () => {
+        tasks = tasks.map;
+    };
+
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove")
@@ -34,25 +44,43 @@
                 toggleTaskDone(index);
             });
         });
-    }
+    };
 
-    const render = () => {
-        let htmlString = "";
+    const renderTasks = () => {
+        let tasksListHTML = "";
 
         for (const task of tasks) {
-            htmlString += `
-                <li class="list__item${task.done ? " taskDone" : ""}">
-
-                <button class="list__uncheckedButton js-done">${task.done ? "✓" : ""}</button>
-
-                <a class="list__task${task.done ? " taskCrossed" : ""}">${task.content}</a>
-
-                <button class="list__removeButton js-remove">X</button>
+            tasksListHTML += `
+                <li class="list__item js-task">
+                    <button class="list__uncheckedButton js-done">${task.done ? "✓" : ""}</button>
+                    <a class="list__task${task.done ? " taskCrossed" : ""}">${task.content}</a>
+                    <button class="list__removeButton js-remove">
+                    X
+                    </button>
                 </li>
             `;
         }
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = tasksListHTML;
         bindEvents();
+    };
+
+    const renderButtons = () => { };
+
+    const bindButtonsEvents = () => {
+        // if
+    };
+
+    const bindRemoveEvents = () => { };
+
+    const bindToggleDoneEvents = () => { };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
+
+        bindRemoveEvents();
+        bindToggleDoneEvents();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
@@ -74,7 +102,6 @@
     };
 
     init();
+};
 
-
-}
-
+//atrybut disabled w przyciskach
