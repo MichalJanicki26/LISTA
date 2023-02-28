@@ -11,21 +11,23 @@
     };
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.splice(index),
+        ];
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks = tasks.map;
+        //const tasksDone = tasks.map(({ done }) => done);
         //
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render()
     };
 
 
-    const toggleAllTasksDone = () => {
-        tasks = tasks.map;
-    };
+    // const toggleAllTasksDone = () => {
+    //     tasks = tasks.map;
+    // };
 
 
     const bindEvents = () => {
