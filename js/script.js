@@ -10,15 +10,17 @@
         render();
     };
 
-    const removeTask = (index) => {
+    const removedIndex = 1
+
+    const removeTask = () => {
         tasks = [
-            ...tasks.splice(index),
+            ...tasks.splice(removedIndex),
         ];
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        //const tasksDone = tasks.map(({ done }) => done);
+        //const tasksDone = tasks.map(({ done }) => );
         //
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render()
