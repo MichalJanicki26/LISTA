@@ -10,7 +10,8 @@
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 0;
-    border-bottom: 2px solid whitesmoke; 
+    border-bottom: 2px solid whitesmoke;
+    display: flex; 
 }
 
 .list__main {
@@ -18,7 +19,7 @@
     padding: 15px;
 }
 
-.list__list {
+.list__head--title {
     margin: 0%;
     padding-inline-start: 0px;
     list-style:none;

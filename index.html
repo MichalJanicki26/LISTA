@@ -20,7 +20,7 @@
 </head>
 
 <body class="body">
-    <h1 class="head">Lista zadań</h1>
+    <h1 class="head js-head">Lista zadań</h1>
     <div class="addNew">
         <p class="addNew__head">Dodaj nowe zadanie</p>
         <form class="addNew__main js-form">
@@ -29,11 +29,13 @@
         </form>
     </div>
     <div class="list">
-        <p class="list__head">Lista Zadań</p>
+        <div class="list__head">
+            <p class="list__head--title">Lista Zadań</p>
+            <div class="list__head--buttons js-headButtons"></div>
+        </div>
         <div class="list__main">
             <ul class="list__list js-tasks"></ul>
         </div>
     </div>
 </body>
-
 </html>
