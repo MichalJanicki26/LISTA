@@ -1,14 +1,12 @@
 .addNew {
     background-color: white;
     margin: 1px;
-
 }
 
 .addNew__head {
     font-size: 18pt;
     font-weight: 700;
     padding: 15px;
-    margin-top: 10px;
     margin-bottom: 0;
     border-bottom: 2px solid whitesmoke; 
 }

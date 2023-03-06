@@ -8,10 +8,11 @@
     font-size: 18pt;
     font-weight: 700;
     padding: 15px;
-    margin-top: 10px;
     margin-bottom: 0;
     border-bottom: 2px solid whitesmoke;
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .list__main {
@@ -23,6 +24,32 @@
     margin: 0%;
     padding-inline-start: 0px;
     list-style:none;
+}
+
+.list__head--buttons {
+    justify-self: flex-end;
+}
+
+.list__head--buttons--button {
+    border: none;
+    background: none;
+    color: teal;
+    font-size: 14pt;
+}
+
+.list__head--buttons--button:hover {
+    color: rgb(0, 168, 160);
+}
+
+.list__head--buttons--button:active {
+    color: rgb(2, 206, 196);
+}
+
+.list__head--buttons--button--disabled {
+    border: none;
+    background: none;
+    color: lightgray;
+    font-size: 14pt;
 }
 
 .list__item {
@@ -67,3 +94,4 @@
 .taskCrossed {
     text-decoration: line-through;
 }
+

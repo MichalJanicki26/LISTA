@@ -73,16 +73,16 @@
         const allHidden = hideDoneTasks;
         const allDone = !tasks.find((task) => task.done===false);
 
-        if(tasks.length > 0) {headButtons.innerHTML = `<button class="list__button js-hideButton">${allHidden ? "pokaż wszystkie" : "ukryj wszystkie"}</button><button class="list__button js-doneButton"${allDone ? "disabled" : ""}>odznacz wszystkie</button>`}
+        if(tasks.length > 0) {headButtons.innerHTML = `<button class="list__head--buttons--button js-hideButton">${allHidden ? "Pokaż ukończone" : "Ukryj ukończone"}</button><button class="list__head--buttons--${allDone ? "button--disabled" : "button"} js-doneButton">Ukończ wszystkie</button>`}
         else {headButtons.innerHTML = ``};
     };
 
     const bindButtonsEvents = () => {
-        bindRemoveEvents();
+        bindDoneEvents();
         bindToggleDoneEvents();
     };
 
-    const bindRemoveEvents = () => { 
+    const bindDoneEvents = () => { 
         const doneButton = document.querySelector(".js-doneButton");
 
         doneButton && doneButton.addEventListener("click", () => {
@@ -103,7 +103,6 @@
     const render = () => {
         renderTasks();
         renderButtons();
-
         bindButtonsEvents();
     };
 
