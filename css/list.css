@@ -28,6 +28,9 @@
 
 .list__head--buttons {
     justify-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .list__head--buttons--button {
