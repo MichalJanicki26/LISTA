@@ -35,7 +35,6 @@
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove")
-
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
                 removeTask(index);
@@ -43,7 +42,6 @@
         });
 
         const toggleDoneButtons = document.querySelectorAll(".js-done")
-
         toggleDoneButtons.forEach((toggleDoneButon, index) => {
             toggleDoneButon.addEventListener("click", () => {
                 taskToggleDone(index);
@@ -72,22 +70,20 @@
 
     const renderButtons = () => {
         const headButtons = document.querySelector(".js-headButtons")
-
+        const allHidden = hideDoneTasks;
         const allDone = !tasks.find((task) => task.done===false);
-        console.log({allDone});
 
-        if(tasks.length > 0) {headButtons.innerHTML = `<button class="list__button js-hideButton">ukryj zrobione</button><button class="list__button js-doneButton"${allDone ? "disabled" : ""}>odznacz wszystkie</button>`}
+        if(tasks.length > 0) {headButtons.innerHTML = `<button class="list__button js-hideButton">${allHidden ? "pokaż wszystkie" : "ukryj wszystkie"}</button><button class="list__button js-doneButton"${allDone ? "disabled" : ""}>odznacz wszystkie</button>`}
         else {headButtons.innerHTML = ``};
     };
 
     const bindButtonsEvents = () => {
-        const hideButton = document.querySelector(".js-hideButton");
-        const doneButton = document.querySelector(".js-doneButton");
+        bindRemoveEvents();
+        bindToggleDoneEvents();
+    };
 
-        hideButton && hideButton.addEventListener("click", () => {
-            hideDoneTasks = !hideDoneTasks;
-            render();
-        });
+    const bindRemoveEvents = () => { 
+        const doneButton = document.querySelector(".js-doneButton");
 
         doneButton && doneButton.addEventListener("click", () => {
             toggleAllDone();
@@ -95,18 +91,19 @@
         });
     };
 
-    const bindRemoveEvents = () => { };
-
     const bindToggleDoneEvents = () => {
+        const hideButton = document.querySelector(".js-hideButton");
 
+        hideButton && hideButton.addEventListener("click", () => {
+            hideDoneTasks = !hideDoneTasks;
+            render();
+        });
     };
 
     const render = () => {
         renderTasks();
         renderButtons();
 
-        bindRemoveEvents();
-        bindToggleDoneEvents();
         bindButtonsEvents();
     };
 
@@ -130,5 +127,3 @@
 
     init();
 };
-
-//atrybut disabled w przyciskach
