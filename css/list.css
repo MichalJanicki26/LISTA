@@ -1,18 +1,12 @@
-.list {
-    background-color: white;
-    margin: 1px;
-    margin-top: 10px;
-}
-
 .list__head {
     font-size: 18pt;
     font-weight: 700;
-    padding: 15px;
     margin-bottom: 0;
     border-bottom: 2px solid whitesmoke;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .list__main {
@@ -20,16 +14,23 @@
     padding: 15px;
 }
 
+.list__list {
+    padding: 0;
+    margin: 0;
+}
+
 .list__head--title {
-    margin: 0%;
-    padding-inline-start: 0px;
-    list-style:none;
+    font-size: 18pt;
+    font-weight: 700;
+    padding: 15px;
+    margin: 0;
 }
 
 .list__head--buttons {
     justify-self: flex-end;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
 }
 
@@ -38,14 +39,15 @@
     background: none;
     color: teal;
     font-size: 14pt;
+    transition: 1s;
 }
 
 .list__head--buttons--button:hover {
-    color: rgb(0, 168, 160);
+    color: rgb(0, 188, 188);
 }
 
 .list__head--buttons--button:active {
-    color: rgb(2, 206, 196);
+    color: rgb(0, 88, 88);
 }
 
 .list__head--buttons--button--disabled {

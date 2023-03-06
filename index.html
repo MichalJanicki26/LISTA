@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/head.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
     <link href="css/addNew.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
@@ -21,21 +22,21 @@
 
 <body class="body">
     <h1 class="head js-head">Lista zadań</h1>
-    <div class="addNew">
-        <p class="addNew__head">Dodaj nowe zadanie</p>
+    <section class="section">
+        <h2 class="addNew__head">Dodaj nowe zadanie</h2>
         <form class="addNew__main js-form">
             <input name="newTask" class="addNew__input js-newTask" placeholder="Co jest do zrobienia?">
             <button class="addNew__button">Dodaj zadanie</button>
         </form>
-    </div>
-    <div class="list">
-        <div class="list__head">
-            <p class="list__head--title">Lista Zadań</p>
+    </section>
+    <section class="section">
+        <header class="list__head">
+            <h2 class="list__head--title">Lista Zadań</h2>
             <div class="list__head--buttons js-headButtons"></div>
-        </div>
+        </header>
         <div class="list__main">
             <ul class="list__list js-tasks"></ul>
         </div>
-    </div>
+    </section>
 </body>
 </html>

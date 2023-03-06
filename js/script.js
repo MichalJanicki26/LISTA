@@ -21,16 +21,14 @@
     const taskToggleDone = (taskIndex) => {
         tasks = [
             ...tasks.slice(0, taskIndex),
-            { ...tasks[taskIndex], done: !tasks[taskIndex].done},
+            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
             ...tasks.slice(taskIndex + 1),
         ];
         render();
     };
 
     const toggleAllDone = () => {
-        tasks = tasks.map((task) => {
-            return {...task, done: true}
-        });
+        tasks = tasks.map((task) => ({ ...task, done: true }));
     };
 
     const bindEvents = () => {
@@ -51,7 +49,7 @@
 
     const renderTasks = () => {
         let tasksListHTML = "";
-        let renderedTasks = hideDoneTasks ? tasks.filter((task) => task.done===false) : tasks;
+        let renderedTasks = hideDoneTasks ? tasks.filter((task) => task.done === false) : tasks;
 
         for (const task of renderedTasks) {
             tasksListHTML += `
@@ -71,10 +69,10 @@
     const renderButtons = () => {
         const headButtons = document.querySelector(".js-headButtons")
         const allHidden = hideDoneTasks;
-        const allDone = !tasks.find((task) => task.done===false);
+        const allDone = !tasks.find((task) => task.done === false);
 
-        if(tasks.length > 0) {headButtons.innerHTML = `<button class="list__head--buttons--button js-hideButton">${allHidden ? "Pokaż ukończone" : "Ukryj ukończone"}</button><button class="list__head--buttons--${allDone ? "button--disabled" : "button"} js-doneButton">Ukończ wszystkie</button>`}
-        else {headButtons.innerHTML = ``};
+        if (tasks.length > 0) { headButtons.innerHTML = `<button class="list__head--buttons--button js-hideButton">${allHidden ? "Pokaż ukończone" : "Ukryj ukończone"}</button><button class="list__head--buttons--${allDone ? "button--disabled" : "button"} js-doneButton">Ukończ wszystkie</button>` }
+        else { headButtons.innerHTML = `` };
     };
 
     const bindButtonsEvents = () => {
@@ -82,7 +80,7 @@
         bindToggleDoneEvents();
     };
 
-    const bindDoneEvents = () => { 
+    const bindDoneEvents = () => {
         const doneButton = document.querySelector(".js-doneButton");
 
         doneButton && doneButton.addEventListener("click", () => {
